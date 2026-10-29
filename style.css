@@ -1,6 +1,7 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #050505;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,9 +29,23 @@ b {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #202020;
-  border: 1px solid #383838;
+  background-color: #101010;
+  border: 1px solid #252525;
   border-radius: 25px;
+}
+#site {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#smallerrectangle {
+  max-width: 720px;
+  width: 100%;
+  background-color: #101010;
+  border: 1px solid #252525;
+  border-radius: 25px;
+  max-height: 100px;
+  height: 100px;
 }
 
 #info {
@@ -73,27 +88,67 @@ b {
   height: 40px;
 }
 #discord,
-#email {
+#slack {
   padding: 20px;
   border-radius: 15px;
   border: #202020, 2px;
-  background-color: #383838;
+  background-color: black;
 }
-#discord img {
+#discord img,
+#github img {
   width: 60px;
   height: 50px;
   max-height: none;
   border-radius: 50%;
 }
-#discord {
+#discord,
+#github {
   display: flex;
   flex-direction: row;
   gap: 10px;
   padding: 20px;
 }
 
-#nickdiscorditp {
+#nickdiscorditp,
+#nickgithubitp {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+#smallerrectangle img {
+  width: 80px;
+}
+#smallerectangle {
+}
+/* Animowane particles */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Zawartość strony nad cząsteczkami */
+#site {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Możliwość klikania w elementy profilu */
+#rectangle,
+#smallerrectangle {
+  pointer-events: auto;
+}
+.vinyl {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    #111 0 2px,
+    #1c1c1c 2px 3px
+  ); /* rowki */
 }

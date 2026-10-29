@@ -8,40 +8,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
   </head>
   <body>
+  <div id="particles-js"></div>
+  <div id="site">
     <div id="rectangle">
       <div id="info">
         <img src="./pfp.png" alt="profilepic" class="pfp" />
         <div id="przypisy">
-          <h1>yaho</h1>
-          <b>"CYTAT"</b>
+          <h1>yaahoo</h1>
+          <b></b>
         </div>
       </div>
       <div id="specialsites">
         <div id="discord">
-          <img src="./Icons/DiscordPfp.png" alt="discordpfp" />
+          <img id="discordpfp"/>
           <div id="nickdiscorditp">
             <i>yaahoo</i>
-            <sub>ostatnio widziany </sub>
+            <sub id="discord_status"></sub>
           </div>
         </div>
-        <div id="email">
-          <a href="">
-            <h1>--------</h1>
-          </a>
+
+        <div id="github">
+          <img src="./Icons/Github.png" alt="github">
+          <div id="nickgithubitp">
+              <i>Jan Chrust</i>
+              <sub>...</sub>
+          </div>  
         </div>
       </div>
       <div id="sites">
         <a href="https://instagram.com" class="icon">
           <img src="./Icons/Instagram.png" alt="instagram" />
-        </a>
-
-        <a href="https://github.com" class="icon">
-          <img src="./Icons/Github.png" alt="github" />
         </a>
 
         <a href="https://spotify.com" class="icon">
@@ -55,16 +59,25 @@
         <a href="https://letterboxd.com" class="icon">
           <img src="./Icons/Letterboxd.png" alt="letterboxd" />
         </a>
+        <a href="gmail.com">
+          <img src="./Icons/Email.png" alt="">
+        </a>
+        <a href="https://slack.com" class="icon">
+          <img src="./Icons/Slack.png" alt="github" />
+        </a>
+
       </div>
     </div>
-    <div id="vievcounter">
-      <script
-        src="https://cdn.commoninja.com/sdk/latest/commonninja.js"
-        defer
-      ></script>
-      <div
-        class="commonninja_component pid-bf89f246-8219-4597-b9fc-5ad7b952fbe6"
-      ></div>
-    </div>
-  </body>
+
+    <div id="smallerrectangle">
+      <img src="/Icons/Vinyl.png" alt="">
+  </div>
+  </div>
+</div>
+    <script>
+  particlesJS.load("particles-js", "particles.json", function () {
+  });
+  </script>
+  <script src="./script.js"></script>
+</body>
 </html>
