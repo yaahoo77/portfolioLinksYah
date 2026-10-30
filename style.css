@@ -76,6 +76,22 @@ b {
   height: 50px;
   width: 200px;
 }
+#discord #avatardiscord {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  flex-shrink: 0;
+}
+#status_dot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 3px solid black;
+  background: red;
+}
 
 #sites {
   display: flex;
@@ -88,7 +104,7 @@ b {
   height: 40px;
 }
 #discord,
-#slack {
+#github {
   padding: 20px;
   border-radius: 15px;
   border: #202020, 2px;
@@ -96,7 +112,7 @@ b {
 }
 #discord img,
 #github img {
-  width: 60px;
+  width: 50px;
   height: 50px;
   max-height: none;
   border-radius: 50%;
@@ -118,9 +134,7 @@ b {
 #smallerrectangle img {
   width: 80px;
 }
-#smallerectangle {
-}
-/* Animowane particles */
+
 #particles-js {
   position: fixed;
   top: 0;
@@ -130,25 +144,13 @@ b {
   z-index: 0;
 }
 
-/* Zawartość strony nad cząsteczkami */
 #site {
   position: relative;
   z-index: 1;
   pointer-events: none;
 }
 
-/* Możliwość klikania w elementy profilu */
 #rectangle,
 #smallerrectangle {
   pointer-events: auto;
-}
-.vinyl {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: repeating-radial-gradient(
-    circle,
-    #111 0 2px,
-    #1c1c1c 2px 3px
-  ); /* rowki */
 }
