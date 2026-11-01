@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>yaahoo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,72 +13,89 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </head>
+
   <body>
-  <div id="particles-js"></div>
-  <div id="site">
-    <div id="rectangle">
-      <div id="info">
-        <img src="./pfp.png" alt="profilepic" class="pfp" />
-        <div id="przypisy">
-          <h1>yaahoo</h1>
-          <b></b>
-        </div>
-      </div>
-      <div id="specialsites">
-        <div id="discord">
-          <div id="avatardiscord">
-            <img id="discordpfp"/>
-            <span id="status_dot"></span>
-          </div>
-          <div id="nickdiscorditp">
-            <i>yaahoo</i>
-            <sub id="discord_status"></sub>
-          </div>
-        </div>
+    <div id="particles-js"></div>
 
-        <div id="github">
-          <img src="./Icons/Github.png" alt="github">
-          <div id="nickgithubitp">
+    <div id="site">
+      <section id="top-card">
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.2">
+        <button id="start_music-button">x</button>
+        <button id="stop_music-button">y</button>
+        <span id="time"></span>
+        <audio src="song.mp3" id="music" ></audio>
+      </section>
+      <main id="main-card">
+        <section id="profile">
+          <img src="./pfp.png" alt="profile picture" class="profile-pic" />
+          <div id="profile-text">
+            <h1>yaahoo</h1>
+            <p class="bio"></p>
+          </div>
+        </section>
+
+        <section id="special-sites">
+          <div id="discord" class="card">
+            <div class="discord-avatar-wrap">
+              <img id="discord-avatar" alt="discord avatar" />
+              <span id="discord-status-dot"></span>
+            </div>
+            <div class="card-text">
+              <i>yaahoo</i>
+              <sub id="discord-status"></sub>
+            </div>
+          </div>
+
+          <div id="github" class="card">
+            <img src="./Icons/Github.png" alt="github" />
+            <div class="card-text">
               <i>Jan Chrust</i>
-              <sub>...</sub>
-          </div>  
+              <sub id="github-repo">...</sub>
+            </div>
+          </div>
+        </section>
+
+        <nav id="socials">
+          <a href="https://instagram.com" class="icon">
+            <img src="./Icons/Instagram.png" alt="instagram" />
+          </a>
+          <a href="https://spotify.com" class="icon">
+            <img src="./Icons/Spotify.png" alt="spotify" />
+          </a>
+          <a href="https://steam.com" class="icon">
+            <img src="./Icons/Steam.png" alt="steam" />
+          </a>
+          <a href="https://letterboxd.com" class="icon">
+            <img src="./Icons/Letterboxd.png" alt="letterboxd" />
+          </a>
+          <a href="gmail.com" class="icon">
+            <img src="./Icons/Email.png" alt="email" />
+          </a>
+          <a href="https://slack.com" class="icon">
+            <img src="./Icons/Slack.png" alt="slack" />
+          </a>
+        </nav>
+      </main>
+
+      <section id="bottom-card">
+        <div id="last-watched">
+          <h1>Last watched:</h1>
+          <h2 id="name_last-watched">Loading...</h2>
+          <p id="rating_last-watched">Loading...</p>
+          <img src="" alt="poster_last-watched" id="poster_last-watched">
         </div>
-      </div>
-      <div id="sites">
-        <a href="https://instagram.com" class="icon">
-          <img src="./Icons/Instagram.png" alt="instagram" />
-        </a>
-
-        <a href="https://spotify.com" class="icon">
-          <img src="./Icons/Spotify.png" alt="spotify" />
-        </a>
-
-        <a href="https://steam.com" class="icon">
-          <img src="./Icons/Steam.png" alt="steam" />
-        </a>
-
-        <a href="https://letterboxd.com" class="icon">
-          <img src="./Icons/Letterboxd.png" alt="letterboxd" />
-        </a>
-        <a href="gmail.com">
-          <img src="./Icons/Email.png" alt="">
-        </a>
-        <a href="https://slack.com" class="icon">
-          <img src="./Icons/Slack.png" alt="github" />
-        </a>
-
-      </div>
+        <div id="favorite-movie">
+          <h1>FAVORITE MOVIE:</h1>
+          <h2 id="name_favorite-movie">Loading...</h2>
+          <p id="rating_favorite-movie">Loading...</p>
+          <img src="" alt="poster_favorite-movie" id="poster_favorite-movie">
+        </div>
+      </section>
     </div>
 
-    <div id="smallerrectangle">
-      <img src="/Icons/Vinyl.png" alt="">
-  </div>
-  </div>
-</div>
     <script>
-  particlesJS.load("particles-js", "particles.json", function () {
-  });
-  </script>
-  <script src="./script.js"></script>
-</body>
+      particlesJS.load("particles-js", "particles.json");
+    </script>
+    <script src="./script.js"></script>
+  </body>
 </html>
