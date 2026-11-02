@@ -3,92 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="yaahoo - links, Discord status, music and movies" />
+    <meta name="author" content="Jan Chrust" />
     <title>yaahoo</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/pfp.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </head>
 
   <body>
+    <div id="enter-screen">
+      <p>click to enter</p>
+    </div>
     <div id="particles-js"></div>
 
     <div id="site">
-      <section id="top-card">
-        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.2">
-        <button id="start_music-button">x</button>
-        <button id="stop_music-button">y</button>
-        <span id="time"></span>
-        <audio src="song.mp3" id="music" ></audio>
-      </section>
       <main id="main-card">
         <section id="profile">
-          <img src="./pfp.png" alt="profile picture" class="profile-pic" />
+          <img src="./img/pfp.jpg" alt="yaahoo profile picture" class="profile-pic" />
           <div id="profile-text">
             <h1>yaahoo</h1>
-            <p class="bio"></p>
+            <p class="bio">Since The Heart Feels Pain So Easily Some Believe Life Is Pain</p>
+            <div id="location">
+              <p>📍 Poland</p>
+            </div>
           </div>
         </section>
 
         <section id="special-sites">
           <div id="discord" class="card">
             <div class="discord-avatar-wrap">
-              <img id="discord-avatar" alt="discord avatar" />
+              <img id="discord-avatar" alt="Discord avatar" />
               <span id="discord-status-dot"></span>
             </div>
             <div class="card-text">
-              <i>yaahoo</i>
-              <sub id="discord-status"></sub>
+              <p class="card-name">yaahoo</p>
+              <p class="card-sub" id="discord-status">Loading...</p>
             </div>
           </div>
 
-          <div id="github" class="card">
-            <img src="./Icons/Github.png" alt="github" />
+          <div id="slack" class="card">
+            <img src="./Icons/slack.png" alt="Slack logo" />
             <div class="card-text">
-              <i>Jan Chrust</i>
-              <sub id="github-repo">...</sub>
+              <p class="card-name">yaahoo</p>
+              <p class="card-sub">On Slack</p>
             </div>
           </div>
         </section>
 
         <nav id="socials">
-          <a href="https://instagram.com" class="icon">
-            <img src="./Icons/Instagram.png" alt="instagram" />
+          <a href="https://www.instagram.com/yaahoo77_/" class="icon">
+            <img src="./Icons/instagram.png" alt="Instagram" />
           </a>
-          <a href="https://spotify.com" class="icon">
-            <img src="./Icons/Spotify.png" alt="spotify" />
+          <a href="https://open.spotify.com/user/xy28xeebsjjkdnfsfq9fn3ihi" class="icon">
+            <img src="./Icons/spotify.png" alt="Spotify" />
           </a>
-          <a href="https://steam.com" class="icon">
-            <img src="./Icons/Steam.png" alt="steam" />
+          <a href="https://steamcommunity.com/id/randomurlx/" class="icon">
+            <img src="./Icons/steam.png" alt="Steam" />
           </a>
-          <a href="https://letterboxd.com" class="icon">
-            <img src="./Icons/Letterboxd.png" alt="letterboxd" />
+          <a href="https://letterboxd.com/graffit_/" class="icon">
+            <img src="./Icons/letterboxd.png" alt="Letterboxd" />
           </a>
-          <a href="gmail.com" class="icon">
-            <img src="./Icons/Email.png" alt="email" />
+          <a href="https://github.com/yaahoo77" class="icon">
+            <img src="./Icons/github.png" alt="GitHub" />
           </a>
-          <a href="https://slack.com" class="icon">
-            <img src="./Icons/Slack.png" alt="slack" />
+          <a href="mailto:janchruscik@gmail.com" class="icon">
+            <img src="./Icons/email.png" alt="Email" />
           </a>
         </nav>
       </main>
 
-      <section id="bottom-card">
-        <div id="last-watched">
-          <h1>Last watched:</h1>
-          <h2 id="name_last-watched">Loading...</h2>
-          <p id="rating_last-watched">Loading...</p>
-          <img src="" alt="poster_last-watched" id="poster_last-watched">
+      <section id="music-card">
+        <img src="./img/vinyl-song.png" alt="Vinyl record with the song cover" id="vinyl" />
+        <div id="song-info">
+          <div id="song-top">
+            <h2 class="song-title">ice - slowed</h2>
+            <p class="song-artist">Zertal</p>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="0.2" aria-label="Volume" />
+          </div>
+          <input id="progress" type="range" min="0" value="0" step="0.1" aria-label="Song progress" />
+          <span id="time">0:00</span>
         </div>
-        <div id="favorite-movie">
-          <h1>FAVORITE MOVIE:</h1>
-          <h2 id="name_favorite-movie">Loading...</h2>
-          <p id="rating_favorite-movie">Loading...</p>
-          <img src="" alt="poster_favorite-movie" id="poster_favorite-movie">
+        <div id="music-buttons">
+          <button id="play-button" aria-label="Play">
+            <img src="./Icons/play.png" alt="Play" />
+          </button>
+          <button id="pause-button" aria-label="Pause">
+            <img src="./Icons/pause.png" alt="Pause" />
+          </button>
+        </div>
+        <audio src="./audio/song.mp3#t=32" id="music"></audio>
+      </section>
+
+      <section id="movies-card">
+        <button id="movies-toggle">
+          <span>movies</span>
+          <span class="arrow">⌄</span>
+        </button>
+        <div id="movies-content">
+          <div class="movie">
+            <p class="movie-label">Last watched:</p>
+            <h3 class="movie-title" id="last-watched-title">Loading...</h3>
+            <p class="movie-rating" id="last-watched-rating">Loading...</p>
+            <img src="" alt="Poster of the last watched movie" class="movie-poster" id="last-watched-poster" />
+          </div>
+          <div class="movie">
+            <p class="movie-label">Favorite movie:</p>
+            <h3 class="movie-title" id="favorite-movie-title">Loading...</h3>
+            <p class="movie-rating" id="favorite-movie-rating">Loading...</p>
+            <img src="" alt="Poster of my favorite movie" class="movie-poster" id="favorite-movie-poster" />
+          </div>
         </div>
       </section>
     </div>

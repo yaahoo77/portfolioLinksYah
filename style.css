@@ -9,10 +9,13 @@ body {
   margin: 0;
 }
 
-a,
-h1,
-.bio {
-  font-family: "Bebas Neue";
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
+#enter-screen p {
+  font-family: "Bebas Neue", sans-serif;
 }
 
 #particles-js {
@@ -33,10 +36,10 @@ h1,
   pointer-events: none;
 }
 
-#main-card, #bottom-card {
+#main-card, #music-card, #movies-card {
   max-width: 720px;
   width: 100%;
-  background-color: #0b0b0b;
+  box-sizing: border-box;
   border: 1px solid #252525;
   border-radius: 25px;
   pointer-events: auto;
@@ -45,7 +48,6 @@ h1,
 #main-card {
   min-height: 400px;
   height: 100%;
-  box-sizing: border-box;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -53,18 +55,11 @@ h1,
   justify-content: center;
 }
 
-
-
-#bottom-card img {
-  width: 80px;
-}
-
 #profile {
   display: flex;
   flex-direction: row;
+  gap: 20px;
   padding: 20px;
-  justify-items: center;
-  align-content: center;
 }
 
 #profile-text {
@@ -78,10 +73,37 @@ h1,
 }
 
 .bio {
-  margin: 0;
   font-weight: 100;
   font-style: italic;
+  letter-spacing: 1px;
+  color: #8a8a8a;
   text-wrap: wrap;
+}
+
+#location {
+  width: fit-content;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border: 1px solid #3a3a3a;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  opacity: 0.5;
+  transition: opacity 0.25s, box-shadow 0.25s;
+}
+
+#location:hover {
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+#location p {
+  font-size: 14px;
+  color: #ffffff;
+  transition: text-shadow 0.25s;
+}
+
+#location:hover p {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }
 
 #special-sites {
@@ -101,6 +123,17 @@ h1,
   border: 2px solid #202020;
   border-radius: 15px;
   background-color: black;
+  color: inherit;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  opacity: 1;
+  border-color: #3a3a3a;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
 .card img {
@@ -109,10 +142,22 @@ h1,
   border-radius: 50%;
 }
 
+#slack img {
+  border-radius: 0;
+}
+
 .card-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.card-name {
+  font-style: italic;
+}
+
+.card-sub {
+  font-size: 13px;
 }
 
 .discord-avatar-wrap {
@@ -142,16 +187,193 @@ h1,
 
 #socials img {
   height: 40px;
+  opacity: 0.5;
+  transition: opacity 0.25s, filter 0.25s, transform 0.25s;
 }
-#bottom-card{
- display: flex;
- flex-direction: row;
- justify-content: space-around;
- align-content: space-around;
- padding-bottom: 20px;
- padding-top: 20px;
+
+#socials a:hover img {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  transform: translateY(-3px);
 }
-h1,h2,p{
+
+#music-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+}
+
+#vinyl {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+#song-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#song-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.song-title {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.song-artist {
+  flex: 1;
+  font-size: 16px;
+  color: #8a8a8a;
+}
+
+#volume {
+  width: 80px;
   margin: 0;
-  padding
+  accent-color: white;
+}
+
+#progress {
+  width: 100%;
+  margin: 0;
+  accent-color: white;
+}
+
+#time {
+  min-width: 36px;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+#music-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+#music-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#music-buttons img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: opacity 0.25s, filter 0.25s;
+}
+
+#music-buttons button:hover img {
+  opacity: 1;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+
+.spinning {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#movies-card {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: fit-content;
+  min-width: 300px;
+  padding: 15px 25px;
+}
+
+#movies-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.25s, text-shadow 0.25s;
+}
+
+#movies-toggle:hover,
+#movies-card.open #movies-toggle {
+  opacity: 1;
+}
+
+#movies-toggle:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+#movies-card.open .arrow {
+  transform: rotate(180deg);
+}
+
+#movies-content {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+#movies-card.open #movies-content {
+  display: flex;
+}
+
+.movie-label {
+  font-size: 20px;
+  color: #8a8a8a;
+}
+
+.movie-title {
+  font-size: 1.5em;
+}
+
+.movie-rating {
+  color: #00e054;
+}
+
+.movie-poster {
+  width: 80px;
+}
+
+#enter-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  cursor: pointer;
+  transition: opacity 0.6s;
+}
+
+#enter-screen p {
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #8a8a8a;
+}
+
+#enter-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
