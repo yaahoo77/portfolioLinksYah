@@ -13,17 +13,29 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
-#enter-screen p {
+a, h1, h2, h3, .bio, #song-top p, .movie p:first-child, #movies-toggle, #enter-screen p {
   font-family: "Bebas Neue", sans-serif;
+}
+
+.card, #location, #socials img, #music-buttons img, #movies-toggle {
+  opacity: 0.5;
+  transition: 0.25s;
+}
+
+.card:hover, #location:hover, #socials a:hover img, #music-buttons button:hover img,
+#movies-toggle:hover, #movies-card.open #movies-toggle {
+  opacity: 1;
+}
+
+#music-buttons button, #movies-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
 }
 
@@ -47,7 +59,6 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
 
 #main-card {
   min-height: 400px;
-  height: 100%;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -57,7 +68,6 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
 
 #profile {
   display: flex;
-  flex-direction: row;
   gap: 20px;
   padding: 20px;
 }
@@ -73,11 +83,9 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
 }
 
 .bio {
-  font-weight: 100;
   font-style: italic;
   letter-spacing: 1px;
   color: #8a8a8a;
-  text-wrap: wrap;
 }
 
 #location {
@@ -87,19 +95,15 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   border: 1px solid #3a3a3a;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.05);
-  opacity: 0.5;
-  transition: opacity 0.25s, box-shadow 0.25s;
 }
 
 #location:hover {
-  opacity: 1;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
 #location p {
   font-size: 14px;
-  color: #ffffff;
-  transition: text-shadow 0.25s;
+  transition: 0.25s;
 }
 
 #location:hover p {
@@ -108,7 +112,6 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
 
 #special-sites {
   display: flex;
-  flex-direction: row;
   gap: 15px;
   justify-content: center;
 }
@@ -117,21 +120,14 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   width: 200px;
   height: 50px;
   display: flex;
-  flex-direction: row;
   gap: 10px;
   padding: 20px;
   border: 2px solid #202020;
   border-radius: 15px;
   background-color: black;
-  color: inherit;
-  font-family: "Inter", sans-serif;
-  text-decoration: none;
-  opacity: 0.5;
-  transition: opacity 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
 .card:hover {
-  opacity: 1;
   border-color: #3a3a3a;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
 }
@@ -152,15 +148,15 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   gap: 5px;
 }
 
-.card-name {
+.card-text p:first-child {
   font-style: italic;
 }
 
-.card-sub {
+.card-text p:last-child {
   font-size: 13px;
 }
 
-.discord-avatar-wrap {
+#discord div:first-child {
   position: relative;
   width: 50px;
   height: 50px;
@@ -187,12 +183,9 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
 
 #socials img {
   height: 40px;
-  opacity: 0.5;
-  transition: opacity 0.25s, filter 0.25s, transform 0.25s;
 }
 
 #socials a:hover img {
-  opacity: 1;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
   transform: translateY(-3px);
 }
@@ -223,27 +216,28 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   gap: 8px;
 }
 
-.song-title {
+#song-top h2 {
   font-size: 20px;
   letter-spacing: 1px;
 }
 
-.song-artist {
+#song-top p {
   flex: 1;
   font-size: 16px;
   color: #8a8a8a;
 }
 
-#volume {
-  width: 80px;
+#volume, #progress {
   margin: 0;
   accent-color: white;
 }
 
+#volume {
+  width: 80px;
+}
+
 #progress {
   width: 100%;
-  margin: 0;
-  accent-color: white;
 }
 
 #time {
@@ -257,21 +251,12 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   gap: 4px;
 }
 
-#music-buttons button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 #music-buttons img {
   width: 20px;
   height: 20px;
-  opacity: 0.5;
-  transition: opacity 0.25s, filter 0.25s;
 }
 
 #music-buttons button:hover img {
-  opacity: 1;
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
 }
 
@@ -300,19 +285,9 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   align-items: center;
   width: 100%;
   padding: 0;
-  background: none;
-  border: none;
   color: white;
   font-size: 20px;
   letter-spacing: 1px;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.25s, text-shadow 0.25s;
-}
-
-#movies-toggle:hover,
-#movies-card.open #movies-toggle {
-  opacity: 1;
 }
 
 #movies-toggle:hover {
@@ -325,7 +300,6 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
 
 #movies-content {
   display: none;
-  flex-direction: row;
   justify-content: center;
   gap: 30px;
   margin-top: 15px;
@@ -335,29 +309,26 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   display: flex;
 }
 
-.movie-label {
+.movie p:first-child {
   font-size: 20px;
   color: #8a8a8a;
 }
 
-.movie-title {
+.movie h3 {
   font-size: 1.5em;
 }
 
-.movie-rating {
+.movie p:last-of-type {
   color: #00e054;
 }
 
-.movie-poster {
+.movie img {
   width: 80px;
 }
 
 #enter-screen {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -377,6 +348,7 @@ a, h1, h2, h3, .bio, .song-artist, .movie-label, #movies-toggle,
   opacity: 0;
   pointer-events: none;
 }
+
 @media (max-width: 600px) {
   #site {
     width: 100%;

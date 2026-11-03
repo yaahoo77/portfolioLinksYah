@@ -21,5 +21,6 @@ script.js        – dane z API i odtwarzacz
 particles.json   – ustawienia tła
 img/             – zdjęcie profilowe, płyta
 audio/           – piosenka
-Icons/           – ikonki
+icons/           – ikonki
 ```
+Inspired by site guns.lol

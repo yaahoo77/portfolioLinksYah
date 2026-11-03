@@ -37,6 +37,10 @@ async function loadDiscord() {
 }
 
 async function loadMovies() {
+  document.getElementById("favorite-movie-title").textContent = favoriteMovie.title;
+  document.getElementById("favorite-movie-rating").textContent = favoriteMovie.rating;
+  document.getElementById("favorite-movie-poster").src = favoriteMovie.poster;
+
   const response = await fetch(LETTERBOXD_RSS);
   const json = await response.json();
   const lastWatched = json.items[0];
@@ -45,10 +49,6 @@ async function loadMovies() {
   document.getElementById("last-watched-title").textContent = splitTitle[0];
   document.getElementById("last-watched-rating").textContent = splitTitle[1];
   document.getElementById("last-watched-poster").src = lastWatched.thumbnail;
-
-  document.getElementById("favorite-movie-title").textContent = favoriteMovie.title;
-  document.getElementById("favorite-movie-rating").textContent = favoriteMovie.rating;
-  document.getElementById("favorite-movie-poster").src = favoriteMovie.poster;
 }
 
 const music = document.getElementById("music");

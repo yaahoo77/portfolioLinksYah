@@ -9,10 +9,7 @@
     <link rel="icon" href="./img/pfp.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300..700&display=swap" />
     <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </head>
@@ -38,43 +35,43 @@
 
         <section id="special-sites">
           <div id="discord" class="card">
-            <div class="discord-avatar-wrap">
+            <div>
               <img id="discord-avatar" alt="Discord avatar" />
               <span id="discord-status-dot"></span>
             </div>
             <div class="card-text">
-              <p class="card-name">yaahoo</p>
-              <p class="card-sub" id="discord-status">Loading...</p>
+              <p>yaahoo</p>
+              <p id="discord-status">Loading...</p>
             </div>
           </div>
 
           <div id="slack" class="card">
-            <img src="./Icons/slack.png" alt="Slack logo" />
+            <img src="./icons/slack.png" alt="Slack logo" />
             <div class="card-text">
-              <p class="card-name">yaahoo</p>
-              <p class="card-sub">On Slack</p>
+              <p>yaahoo</p>
+              <p>On Slack</p>
             </div>
           </div>
         </section>
 
         <nav id="socials">
-          <a href="https://www.instagram.com/yaahoo77_/" class="icon">
-            <img src="./Icons/instagram.png" alt="Instagram" />
+          <a href="https://www.instagram.com/yaahoo77_/">
+            <img src="./icons/instagram.png" alt="Instagram" />
           </a>
-          <a href="https://open.spotify.com/user/xy28xeebsjjkdnfsfq9fn3ihi" class="icon">
-            <img src="./Icons/spotify.png" alt="Spotify" />
+          <a href="https://open.spotify.com/user/xy28xeebsjjkdnfsfq9fn3ihi">
+            <img src="./icons/spotify.png" alt="Spotify" />
           </a>
-          <a href="https://steamcommunity.com/id/randomurlx/" class="icon">
-            <img src="./Icons/steam.png" alt="Steam" />
+          <a href="https://steamcommunity.com/id/randomurlx/">
+            <img src="./icons/steam.png" alt="Steam" />
           </a>
-          <a href="https://letterboxd.com/graffit_/" class="icon">
-            <img src="./Icons/letterboxd.png" alt="Letterboxd" />
+          <a href="https://letterboxd.com/graffit_/">
+            <img src="./icons/letterboxd.png" alt="Letterboxd" />
           </a>
-          <a href="https://github.com/yaahoo77" class="icon">
-            <img src="./Icons/github.png" alt="GitHub" />
+          <a href="https://github.com/yaahoo77">
+            <img src="./icons/github.png" alt="GitHub" />
           </a>
-          <a href="mailto:janchruscik@gmail.com" class="icon">
-            <img src="./Icons/email.png" alt="Email" />
+          <a href="mailto:janchruscik@gmail.com">
+            <img src="./icons/email.png" alt="Email" />
           </a>
         </nav>
       </main>
@@ -83,19 +80,19 @@
         <img src="./img/vinyl-song.png" alt="Vinyl record with the song cover" id="vinyl" />
         <div id="song-info">
           <div id="song-top">
-            <h2 class="song-title">ice - slowed</h2>
-            <p class="song-artist">Zertal</p>
+            <h2>ice - slowed</h2>
+            <p>Zertal</p>
             <input id="volume" type="range" min="0" max="1" step="0.01" value="0.2" aria-label="Volume" />
           </div>
           <input id="progress" type="range" min="0" value="0" step="0.1" aria-label="Song progress" />
           <span id="time">0:00</span>
         </div>
         <div id="music-buttons">
-          <button id="play-button" aria-label="Play">
-            <img src="./Icons/play.png" alt="Play" />
+          <button id="play-button">
+            <img src="./icons/play.png" alt="Play" />
           </button>
-          <button id="pause-button" aria-label="Pause">
-            <img src="./Icons/pause.png" alt="Pause" />
+          <button id="pause-button">
+            <img src="./icons/pause.png" alt="Pause" />
           </button>
         </div>
         <audio src="./audio/song.mp3#t=32" id="music"></audio>
@@ -108,16 +105,16 @@
         </button>
         <div id="movies-content">
           <div class="movie">
-            <p class="movie-label">Last watched:</p>
-            <h3 class="movie-title" id="last-watched-title">Loading...</h3>
-            <p class="movie-rating" id="last-watched-rating">Loading...</p>
-            <img src="" alt="Poster of the last watched movie" class="movie-poster" id="last-watched-poster" />
+            <p>Last watched:</p>
+            <h3 id="last-watched-title">Loading...</h3>
+            <p id="last-watched-rating">Loading...</p>
+            <img src="" alt="Poster of the last watched movie" id="last-watched-poster" />
           </div>
           <div class="movie">
-            <p class="movie-label">Favorite movie:</p>
-            <h3 class="movie-title" id="favorite-movie-title">Loading...</h3>
-            <p class="movie-rating" id="favorite-movie-rating">Loading...</p>
-            <img src="" alt="Poster of my favorite movie" class="movie-poster" id="favorite-movie-poster" />
+            <p>Favorite movie:</p>
+            <h3 id="favorite-movie-title">Loading...</h3>
+            <p id="favorite-movie-rating">Loading...</p>
+            <img src="" alt="Poster of my favorite movie" id="favorite-movie-poster" />
           </div>
         </div>
       </section>
