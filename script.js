@@ -28,7 +28,7 @@ async function loadDiscord() {
   const data = json.data;
 
   const status = data.discord_status;
-  document.getElementById("discord-status").textContent = statusNames[status];
+  document.getElementById("discord-status").textContent = statusNames[status] + " on Discord";
   document.getElementById("discord-status-dot").style.backgroundColor = statusColors[status];
 
   const user = data.discord_user;
