@@ -1,0 +1,10 @@
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}

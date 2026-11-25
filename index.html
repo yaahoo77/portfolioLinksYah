@@ -9,9 +9,9 @@
     <link rel="icon" href="./img/pfp.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300..700&display=swap" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300..700&display=swap" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/minimal.css" />
   </head>
   <body>
     <div id="enter-screen">
@@ -19,7 +19,7 @@
     </div>
     <div id="particles-js"></div>
     <div id="site">
-      <main id="main-card">
+      <main id="main-card" class="panel">
         <section id="profile">
           <img src="./img/pfp.jpg" alt="yaahoo profile picture" class="profile-pic" />
           <div id="profile-text">
@@ -69,8 +69,9 @@
             <img src="./icons/email.png" alt="Email" />
           </a>
         </nav>
+        <a href="./portfolio.html" id="portfolio-link" class="text-link">more about me →</a>
       </main>
-      <section id="music-card">
+      <section id="music-card" class="panel">
         <img src="./img/vinyl-song.png" alt="Vinyl record with the song cover" id="vinyl" />
         <div id="song-info">
           <div id="song-top">
@@ -91,7 +92,7 @@
         </div>
         <audio src="./audio/song.mp3#t=32" id="music"></audio>
       </section>
-      <section id="movies-card">
+      <!-- <section id="movies-card" class="panel">
         <button id="movies-toggle">
           <span>movies</span>
           <span class="arrow">⌄</span>
@@ -102,19 +103,18 @@
             <h3 id="last-watched-title">Loading...</h3>
             <p id="last-watched-rating">Loading...</p>
             <img src="" alt="Poster of the last watched movie" id="last-watched-poster" />
-          </div>
-          <div class="movie">
+          </div> -->
+          <!-- <div class="movie">
             <p>Favorite movie:</p>
             <h3 id="favorite-movie-title">12 Angry Men, 1957</h3>
             <p id="favorite-movie-rating">★★★★★</p>
             <img src="https://a.ltrbxd.com/resized/film-poster/5/1/7/0/0/51700-12-angry-men-0-1000-0-1500-crop.jpg?v=b8aaf291a9" alt="Poster of my favorite movie" id="favorite-movie-poster" />
-          </div>
-        </div>
-      </section>
+          </div> -->
+        <!-- </div>
+      </section> -->
     </div>
-    <script>
-      particlesJS.load("particles-js", "particles.json");
-    </script>
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="./js/particles-config.js"></script>
+    <script src="./js/minimal.js"></script>
   </body>
 </html>

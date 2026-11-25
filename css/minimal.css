@@ -1,7 +1,7 @@
 body {
   background-color: #050505;
   color: #ffffff;
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,13 +17,13 @@ a, h1, h2, h3, .bio, #song-top p, .movie p:first-child, #movies-toggle, #enter-s
   font-family: "Bebas Neue", sans-serif;
 }
 
-.card, #location, #socials img, #music-buttons img, #movies-toggle {
+.card, #location, #socials img, #music-buttons img, #movies-toggle, .text-link {
   opacity: 0.5;
   transition: 0.25s;
 }
 
 .card:hover, #location:hover, #socials a:hover img, #music-buttons button:hover img,
-#movies-toggle:hover, #movies-card.open #movies-toggle {
+#movies-toggle:hover, #movies-card.open #movies-toggle, .text-link:hover {
   opacity: 1;
 }
 
@@ -31,12 +31,6 @@ a, h1, h2, h3, .bio, #song-top p, .movie p:first-child, #movies-toggle, #enter-s
   background: none;
   border: none;
   cursor: pointer;
-}
-
-#particles-js {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
 }
 
 #site {
@@ -84,7 +78,7 @@ a, h1, h2, h3, .bio, #song-top p, .movie p:first-child, #movies-toggle, #enter-s
 
 .bio {
   font-style: italic;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #8a8a8a;
 }
 
@@ -188,6 +182,14 @@ a, h1, h2, h3, .bio, #song-top p, .movie p:first-child, #movies-toggle, #enter-s
 #socials a:hover img {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
   transform: translateY(-3px);
+}
+
+.text-link {
+  margin-top: 10px;
+  color: inherit;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 #music-card {

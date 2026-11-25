@@ -107,9 +107,11 @@ enterScreen.addEventListener("click", () => {
 
 const moviesCard = document.getElementById("movies-card");
 const moviesToggle = document.getElementById("movies-toggle");
-moviesToggle.addEventListener("click", () => {
-  moviesCard.classList.toggle("open");
-});
+if (moviesToggle) {
+  moviesToggle.addEventListener("click", () => {
+    moviesCard.classList.toggle("open");
+  });
+}
 
 loadDiscord();
 loadMovies();
